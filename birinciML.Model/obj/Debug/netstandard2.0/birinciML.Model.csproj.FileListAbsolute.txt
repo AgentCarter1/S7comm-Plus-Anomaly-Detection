@@ -1,0 +1,11 @@
+C:\Users\karis\Desktop\Hackhaton\birinciML.Model\bin\Debug\netstandard2.0\MLModel.zip
+C:\Users\karis\Desktop\Hackhaton\birinciML.Model\bin\Debug\netstandard2.0\birinciML.Model.deps.json
+C:\Users\karis\Desktop\Hackhaton\birinciML.Model\bin\Debug\netstandard2.0\birinciML.Model.dll
+C:\Users\karis\Desktop\Hackhaton\birinciML.Model\bin\Debug\netstandard2.0\birinciML.Model.pdb
+C:\Users\karis\Desktop\Hackhaton\birinciML.Model\obj\Debug\netstandard2.0\birinciML.Model.csproj.AssemblyReference.cache
+C:\Users\karis\Desktop\Hackhaton\birinciML.Model\obj\Debug\netstandard2.0\birinciML.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\karis\Desktop\Hackhaton\birinciML.Model\obj\Debug\netstandard2.0\birinciML.Model.AssemblyInfoInputs.cache
+C:\Users\karis\Desktop\Hackhaton\birinciML.Model\obj\Debug\netstandard2.0\birinciML.Model.AssemblyInfo.cs
+C:\Users\karis\Desktop\Hackhaton\birinciML.Model\obj\Debug\netstandard2.0\birinciML.Model.csproj.CoreCompileInputs.cache
+C:\Users\karis\Desktop\Hackhaton\birinciML.Model\obj\Debug\netstandard2.0\birinciML.Model.dll
+C:\Users\karis\Desktop\Hackhaton\birinciML.Model\obj\Debug\netstandard2.0\birinciML.Model.pdb
