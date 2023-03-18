@@ -1,0 +1,11 @@
+C:\Users\karis\Desktop\denemee\ikinci\ikinciML.Model\bin\Debug\netstandard2.0\MLModel.zip
+C:\Users\karis\Desktop\denemee\ikinci\ikinciML.Model\bin\Debug\netstandard2.0\ikinciML.Model.deps.json
+C:\Users\karis\Desktop\denemee\ikinci\ikinciML.Model\bin\Debug\netstandard2.0\ikinciML.Model.dll
+C:\Users\karis\Desktop\denemee\ikinci\ikinciML.Model\bin\Debug\netstandard2.0\ikinciML.Model.pdb
+C:\Users\karis\Desktop\denemee\ikinci\ikinciML.Model\obj\Debug\netstandard2.0\ikinciML.Model.csproj.AssemblyReference.cache
+C:\Users\karis\Desktop\denemee\ikinci\ikinciML.Model\obj\Debug\netstandard2.0\ikinciML.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\karis\Desktop\denemee\ikinci\ikinciML.Model\obj\Debug\netstandard2.0\ikinciML.Model.AssemblyInfoInputs.cache
+C:\Users\karis\Desktop\denemee\ikinci\ikinciML.Model\obj\Debug\netstandard2.0\ikinciML.Model.AssemblyInfo.cs
+C:\Users\karis\Desktop\denemee\ikinci\ikinciML.Model\obj\Debug\netstandard2.0\ikinciML.Model.csproj.CoreCompileInputs.cache
+C:\Users\karis\Desktop\denemee\ikinci\ikinciML.Model\obj\Debug\netstandard2.0\ikinciML.Model.dll
+C:\Users\karis\Desktop\denemee\ikinci\ikinciML.Model\obj\Debug\netstandard2.0\ikinciML.Model.pdb
