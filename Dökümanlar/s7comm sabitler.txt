@@ -1,0 +1,258 @@
+##
+# Bunların çoğu s7comm'dan alınmıştır
+# wireshark disektör eklenti kaynakları
+# Thomas Wiens tarafından oluşturuldu <th.wiens[AT]gmx.de>
+# Tarih: 2016-15-03
+# Yazar: Gyorgy Miru
+# Sürüm: 0.2
+##
+
+#Protokol Kimliği:
+0x32 - Protokol Kimliği
+
+#Mesaj Türleri:
+0x01 - İş Talebi
+0x02 - Onay
+0x03 - Onay Verisi
+0x07 - Kullanıcı verileri
+
+#Başlık Hatası Sınıfı:
+0x00 - Hata yok
+0x81 - Uygulama ilişkisi hatası
+0x82 - Nesne tanımlama hatası
+0x83 - Kaynak yok hatası
+0x84 - Hizmet işlemede hata
+0x85 - Sarf malzemeleri hatası
+0x87 - Erişim hatası
+
+#Header Hata Kodları: (Hatayı daha da iyileştirir)
+
+#Parametre Hata Kodları:
+0x0000 - Hata yok
+0x0110 - Geçersiz blok türü numarası
+0x0112 - Geçersiz parametre
+0x011A - PG kaynak hatası
+0x011B - PLC kaynak hatası
+0x011C - Protokol hatası
+0x011F - Kullanıcı arabelleği çok kısa
+0x0141 - İstek hatası
+0x01C0 - Sürüm uyuşmazlığı
+0x01F0 - Uygulanmadı
+0x8001 - L7 geçersiz CPU durumu
+0x8500 - L7 PDU boyutu hatası
+0xD401 - L7 geçersiz SZL kimliği
+0xD402 - L7 geçersiz dizin
+0xD403 - L7 DGS Bağlantısı zaten duyuruldu
+0xD404 - L7 Maks kullanıcı NB
+0xD405 - L7 DGS işlev parametresi sözdizimi hatası
+0xD406 - L7 bilgi yok
+0xD601 - L7 PRT işlevi parametresi sözdizimi hatası
+0xD801 - L7 geçersiz değişken adresi
+0xD802 - L7 bilinmeyen istek
+0xD803 - L7 geçersiz istek durumu
+
+#Öğe yanıtının dönüş değeri
+0x00 - Ayrıldı
+0x01 - Donanım hatası
+0x03 - Nesneye erişime izin verilmiyor
+0x05 - Adres aralık dışında
+0x06 - Veri türü desteklenmiyor
+0x07 - Veri türü tutarsız
+0x0a - Nesne mevcut değil
+0xff - Başarı
+
+#İş Talebi/Onay-Veri fonksiyon kodları
+0x00 - CPU hizmetleri
+0xF0 - İletişimi kur
+0x04 - Değişkeni Oku
+0x05 - Değişken Yaz
+0x1A - İndirme iste
+0x1B - İndirme bloğu
+0x1C - İndirme sona erdi
+0x1D - Yüklemeyi başlat
+0x1E - Yükle
+0x1F - Yüklemeyi sonlandır
+0x28 - PLC Kontrol
+0x29 - PLC Durdurma
+
+#Bellek Alanları
+0x03 - S200 ailesinin sistem bilgisi
+0x05 - S200 ailesinin sistem bayrakları
+0x06 - S200 ailesinin analog girişleri
+0x07 - S200 ailesinin analog çıkışları
+0x1C - S7 sayaçları (C)
+0x1D - S7 zamanlayıcılar (T)
+0x1E - IEC sayaçları (200 ailesi)
+0x1F - IEC zamanlayıcılar (200 aile)
+0x80 - Doğrudan çevresel erişim (P)
+0x81 - Girişler (I)
+0x82 - Çıkışlar (Q)
+0x83 - Bayraklar (M) (Merker)
+0x84 - Veri blokları (DB)
+0x85 - Örnek veri blokları (DI)
+0x86 - Yerel veri (L)
+0x87 - Henüz bilinmiyor (V)
+
+#Öğe verilerinde taşıma boyutu (değişken Tür)
+0x01 - BIT
+0x02 - BYTE
+0x03 - KAR
+0x04 - SÖZ
+0x05 - INT
+0x06 - DWORD
+0x07 - DINT
+0x08 - GERÇEK
+0x09 - TARİH
+0x0A - TOD
+0x0B - ZAMAN
+0x0C - S5TIME
+0x0F - TARİH VE SAAT
+0x1C - SAYAÇ
+0x1D - ZAMANLAYICI
+0x1E - IEC ZAMANLAYICI
+0x1F - IEC SAYACI
+0x20 - İÜ SAYAÇ
+
+#Değişken adresleme modu
+0x10 - S7-Herhangi bir işaretçi (normal adresleme) hafıza+değişken uzunluk+ofset
+0xa2 - Drive-ES-S7 üzerinden yönlendirme ile Drive ES Starter'da görülenler
+0xb2 - S1200/S1500? Sembolik adresleme modu
+0xb0 - S400 için özel DB adresleme (alt öğe okuma/yazma)
+
+#Verilerdeki taşıma boyutu
+0x00 - BOŞ
+0x03 - BIT
+0x04 - BYTE/WORD/DWORD
+0x05 - TAM SAYI
+0x07 - GERÇEK
+0x09 - OKTET DİZİSİ
+
+#Blok türü sabitleri
+'08' - OB
+'0A' - DB
+'0B' - SDB
+'0C' - FC
+'0D' - SFC
+'0E' - FB
+'0F' - SFB
+
+#Alt blok türleri
+0x08 - OB
+0x0a - DB
+0x0b - SDB
+0x0c - FC
+0x0d - SFC
+0x0e - FB
+0x0f - SFB
+
+#Güvenlik modunu engelle
+0 - Yok
+3 - Kow Nasıl Korunur
+
+#Blok Dili
+0x00 - Tanımlanmadı
+0x01 - AWL
+0x02 - KOP
+0x03 - FUP
+0x04 - SCL
+0x05 - DB
+0x06 - GRAFİK
+0x07 - SDB
+0x08 - CPU-DB DB, Plc programından oluşturuldu (CREAT_DB)
+0x11 - SDB (genel sıfırlamadan sonra) başka bir SDB, ne anlama geldiğini bilmiyorum, SDB 1 ve SDB 2'de belirsiz
+0x12 - SDB (Yönlendirme) başka bir SDB, SDB 999 ve SDB 1000'de (yönlendirme bilgisi), belirsiz
+0x29 - ENCRYPT bloğu S7-Block-Privacy ile şifrelenir (kodlanır?)
+
+#Kullanıcı verisi aktarım türü
+0x0 - PLC tarafından döngüsel veri gönderme
+0x4 - Usta tarafından talep
+0x8 - Köle tarafından yanıt
+
+#Userdata son PDU
+0x00 - Evet
+0x01 - Hayır
+
+#Kullanıcı Verileri İşlevleri
+0x1 - Programcı komutları
+0x2 - Döngüsel veri
+0x3 - Blok işlevleri
+0x4 - CPU işlevleri
+0x5 - Güvenlik
+0x7 - Zaman fonksiyonları
+
+#Değişken tablo veri türü
+0x14 - İstek
+0x04 - Yanıt
+
+#KDV alanı ve uzunluk türü
+0x01 - MB
+0x02 - MW
+0x03 - MD
+0x11 - IB
+0x12 - IW
+0x13 - kimlik
+0x21 - QB
+0x22 - QW
+0x23 - QD
+0x31 - PIB
+0x32 - PIW
+0x33 - PID
+0x71 - DBB
+0x72 - DBW
+0x73 - DBD
+0x54 - ZAMANLAYICI
+0x64 - SAYAÇ
+
+#Userdata programcı alt işlevleri
+0x01 - Tanılama verilerini iste (Tip 1)
+0x02 - VarTab
+0x0c - Sil
+0x0e - Tanılama verilerini oku
+0x0f - Tanılama verilerini kaldır
+0x10 - Kuvvetler
+0x13 - Tanılama verilerini iste (Tip2)
+
+#Userdata döngüsel veri alt işlevleri
+0x01 - Bellek
+0x04 - Aboneliği iptal et
+
+#Userdata blok alt işlevleri
+0x01 - Blokları listele
+0x02 - Tür bloklarını listele
+0x03 - Blok bilgilerini al
+
+#Userdata CPU alt işlevleri
+0x01 - SZL'yi oku
+0x02 - Mesaj servisi
+0x03 - Durdurmaya geçiş
+0x0b - HMI/SCADA 1'de alarm onaylandı
+0x0c - HMI/SCADA 2'de alarm onaylandı
+0x11 - PLC bir ALARM mesajı gösteriyor
+0x13 - HMI/SCADA, ALARM aboneliğini başlatıyor
+
+
+#Userdata güvenlik alt işlevleri
+0x01 - PLC şifresi
+
+#Kullanıcı verileri zaman alt işlevleri
+0x01 - Saati oku
+0x02 - Saati ayarla
+0x03 - Saati oku (aşağıda)
+0x04 - Saati ayarla
+
+#KAPAK erişimi için bayraklar
+0x2 - Kapsüllenmiş KAPAK
+0x3 - Kapsüllenmiş Dizin
+0x4 - LID ile al
+0x5 - Dizine Göre Al
+0x6 - Parça Başlangıç ​​Adresi
+0x7 - Parça Uzunluğu
+
+#TIA 1200 alan adları
+0x8a0e - DB
+0x0000 - IQMCT
+0x50 - Girişler (I)
+0x51 - Çıkışlar (Q)
+0x52 - Bayraklar (M)
+0x53 - Sayaç (C)
+0x54 - Zamanlayıcı (T)
